@@ -35,7 +35,16 @@
         var bmi = weight / (length * length);
         
         document.getElementById("bmi").innerHTML = bmi
-        
+
+        if(bmi < 18.5){
+            document.getElementById("bmi-status").innerHTML = "Underweight"
+        }else if(bmi >= 18.5 && bmi <= 24.9){
+            document.getElementById("bmi-status").innerHTML = "Normal"
+        }else if(bmi >= 25 && bmi <= 29.9){
+            document.getElementById("bmi-status").innerHTML = "Overweight"
+        }else{
+            document.getElementById("bmi-status").innerHTML = "Obese"
+        }
     });
 </script>
 </html> 
